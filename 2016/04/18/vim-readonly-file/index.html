@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="平凡的世界">
 <meta property="og:description" content="问题描述在Linux上以普通用户用Vim打开一个root权限文件，当需要保存更改时会提示1E45: &amp;apos;readonly&amp;apos; option is set (add ! to override)">
 <meta property="og:image" content="http://yoursite.com/2016/04/18/vim-readonly-file/Tee.svg">
-<meta property="og:updated_time" content="2016-04-18T02:28:09.612Z">
+<meta property="og:updated_time" content="2016-04-18T08:45:35.277Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="普通用户用Vim打开root权限的文件">
 <meta name="twitter:description" content="问题描述在Linux上以普通用户用Vim打开一个root权限文件，当需要保存更改时会提示1E45: &amp;apos;readonly&amp;apos; option is set (add ! to override)">
@@ -236,8 +236,10 @@
         <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><p>在Linux上以普通用户用Vim打开一个root权限文件，当需要保存更改时会提示<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">E45: &apos;readonly&apos; option is set (add ! to override)</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:w !sudo tee %</span><br></pre></td></tr></table></figure>
-<h2 id="关于tee命令"><a href="#关于tee命令" class="headerlink" title="关于tee命令"></a>关于<code>tee</code>命令</h2><p>用维基百科上的一幅图来解释吧：<br><img src="/2016/04/18/vim-readonly-file/Tee.svg" alt="Tee.svg" title=""></p>
-
+<h2 id="关于tee命令"><a href="#关于tee命令" class="headerlink" title="关于tee命令"></a>关于<code>tee</code>命令</h2><p>用维基百科上的一幅图来解释吧：</p>
+<p><div style="text-align:center"><br><img src="/2016/04/18/vim-readonly-file/Tee.svg" alt="Tee.svg" title=""></div></p>
+<div>
+</div>
       
     </div>
     
