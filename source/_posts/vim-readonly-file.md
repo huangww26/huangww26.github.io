@@ -18,4 +18,6 @@ E45: 'readonly' option is set (add ! to override)
 
 ## 关于```tee```命令
 用维基百科上的一幅图来解释吧：
+<div style="text-align:center">
 {% asset_img Tee.svg  %}
+<div>
