@@ -15,6 +15,7 @@ class TreeNode(object):
         self.left = None
         self.right = None
 ```
+<!--more-->
 
 ## 前序遍历
 为了保证先左子树后右子树的顺序，在进栈时先进右子结点的地址，后进左子结点的地址
@@ -29,4 +30,12 @@ def preOrder(root):
         print p.val
         if p.right: s.append(p.right) 
         if p.left: s.append(p.left) 
+```
+
+## 中序遍历
+```python
+def inOrder(root):
+    if not root:
+        return 
+
 ```
