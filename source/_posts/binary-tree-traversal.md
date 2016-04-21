@@ -2,7 +2,7 @@
 title: 二叉树遍历的非递归算法
 date: 2016-04-19 13:05:52
 category: 学习笔记
-tags: Algorithms
+tags: Algorithm
 ---
 
 为了把一个递归过程改为非递归过程，一般需要利用一个工作栈，记录遍历时回退路径
