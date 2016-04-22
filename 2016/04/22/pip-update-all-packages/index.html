@@ -4,17 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives: 2016/3 | 平凡的世界</title>
+  <title>Python用pip升级所有包 | 平凡的世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="平凡的世界">
-<meta property="og:url" content="http://yoursite.com/archives/2016/03/index.html">
+  <meta name="description" content="列出安装的包1pip list">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python用pip升级所有包">
+<meta property="og:url" content="http://yoursite.com/2016/04/22/pip-update-all-packages/index.html">
 <meta property="og:site_name" content="平凡的世界">
-<meta property="og:description">
+<meta property="og:description" content="列出安装的包1pip list">
+<meta property="og:updated_time" content="2016-04-22T05:21:32.459Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="平凡的世界">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Python用pip升级所有包">
+<meta name="twitter:description" content="列出安装的包1pip list">
   
     <link rel="alternative" href="/atom.xml" title="平凡的世界" type="application/atom+xml">
   
@@ -189,92 +190,129 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-pip-update-all-packages" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/31/bash-hot-key/" class="archive-article-date">
-  	<time datetime="2016-03-31T03:58:23.000Z" itemprop="datePublished">3月 31</time>
+    <div class="article-meta">
+      <a href="/2016/04/22/pip-update-all-packages/" class="article-date">
+  	<time datetime="2016-04-22T05:09:10.000Z" itemprop="datePublished">2016-04-22</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/31/bash-hot-key/">Ubuntu下Bash的快捷键</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python用pip升级所有包
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bash/">bash</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>列出安装的包<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip list</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<a id="more"></a>
+<ul>
+<li><p>列出可升级的包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip list --outdate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列出已安装的最新版本的包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip list --uptodate</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>升级一个包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install --upgrade &lt;package-name&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>pip当前内建命令并不支持升级所有包，但可以使用下面的命令来升级所有包<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip freeze --local | grep -v <span class="string">'^-e'</span> | cut <span class="_">-d</span> = <span class="_">-f</span> 1 | xargs -n1 pip install -U</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/04/21/python-with-statement/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">with语句</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/29/mysql-ubuntu/" class="archive-article-date">
-  	<time datetime="2016-03-29T07:48:58.000Z" itemprop="datePublished">3月 29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/29/mysql-ubuntu/">在Ubuntu下使用MySQL</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySql/">MySql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
-	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="pip-update-all-packages" data-title="Python用pip升级所有包" data-url="http://yoursite.com/2016/04/22/pip-update-all-packages/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"hwwbd"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -307,8 +345,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
