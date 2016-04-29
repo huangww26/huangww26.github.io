@@ -4,17 +4,24 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives: 2016/3 | 平凡的世界</title>
+  <title>Python必须了解的标准库 | 平凡的世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="平凡的世界">
-<meta property="og:url" content="http://yoursite.com/archives/2016/03/index.html">
+  <meta name="description" content="atexit 允许注册在程序退出时调用的函数
+argparse 提供解析命令行参数的函数
+bisect 为可排序列表提供二分查找算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python必须了解的标准库">
+<meta property="og:url" content="http://yoursite.com/2016/04/29/python-standard-lib/index.html">
 <meta property="og:site_name" content="平凡的世界">
-<meta property="og:description">
+<meta property="og:description" content="atexit 允许注册在程序退出时调用的函数
+argparse 提供解析命令行参数的函数
+bisect 为可排序列表提供二分查找算法">
+<meta property="og:updated_time" content="2016-04-29T03:35:19.557Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="平凡的世界">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Python必须了解的标准库">
+<meta name="twitter:description" content="atexit 允许注册在程序退出时调用的函数
+argparse 提供解析命令行参数的函数
+bisect 为可排序列表提供二分查找算法">
   
     <link rel="alternative" href="/atom.xml" title="平凡的世界" type="application/atom+xml">
   
@@ -189,92 +196,140 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-python-standard-lib" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/31/bash-hot-key/" class="archive-article-date">
-  	<time datetime="2016-03-31T02:58:23.000Z" itemprop="datePublished">3月 31</time>
+    <div class="article-meta">
+      <a href="/2016/04/29/python-standard-lib/" class="article-date">
+  	<time datetime="2016-04-29T03:17:24.000Z" itemprop="datePublished">2016-04-29</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/31/bash-hot-key/">Ubuntu下Bash的快捷键</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Python必须了解的标准库
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bash/">bash</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><strong>atexit</strong> 允许注册在程序退出时调用的函数</li>
+<li><strong>argparse</strong> 提供解析命令行参数的函数</li>
+<li><strong>bisect</strong> 为可排序列表提供二分查找算法<a id="more"></a></li>
+<li><strong>calendar</strong> 提供一组与日期相关的函数</li>
+<li><strong>codecs</strong> 提供编解码数据的函数</li>
+<li><strong>collections</strong> 提供一组有用的数据结构</li>
+<li><strong>copy</strong> 提供复制数据的函数</li>
+<li><strong>csv</strong> 提供用于读写CSV文件的函数</li>
+<li><strong>datetime</strong> 提供用于处理日期和时间类的函数</li>
+<li><strong>fnmatch</strong> 提供用于匹配Unix风格文件名模式的函数</li>
+<li><strong>glob</strong> 提供用于匹配Unix风格路径模式的函数</li>
+<li><strong>io</strong> 提供用于处理I/O流的函数</li>
+<li><strong>json</strong> 提供用来读写JSON格式数据的函数</li>
+<li><strong>logging</strong> 提供对Python内置日志功能的访问</li>
+<li><strong>multiprocessing</strong> 可以在应用程序中运行多个子进程，而且提供API让这些子进程看上去像线程一样</li>
+<li><strong>operator</strong> 提供实现基本的Python运算功能的函数，可以使用这些函数而不是自己写lambda表达式</li>
+<li><strong>os</strong> 提供对基本的操作系统函数的访问</li>
+<li><strong>random</strong> 提供生成伪随机数的函数</li>
+<li><strong>re</strong> 提供正则表达式功能</li>
+<li><strong>select</strong> 提供函数<em>select()</em>和<em>ploo()</em>的访问，用于创建时间循环</li>
+<li><strong>shutil</strong> 提供对高级文件处理函数的访问</li>
+<li><strong>signal</strong> 提供用于处理POSIX信号的函数</li>
+<li><strong>tempfile</strong> 提供用于创建临时文件和目录的函数</li>
+<li><strong>threading</strong> 提供对处理高级线程功能的访问</li>
+<li><strong>urllib(urllib2, urlprase)</strong> 提供处理和解析URL的函数</li>
+<li><strong>uuid</strong> 可以生成全局唯一标识符</li>
+</ul>
+
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/04/22/pip-update-all-packages/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python用pip升级所有包</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/03/29/mysql-ubuntu/" class="archive-article-date">
-  	<time datetime="2016-03-29T06:48:58.000Z" itemprop="datePublished">3月 29</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/03/29/mysql-ubuntu/">在Ubuntu下使用MySQL</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySql/">MySql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
-	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="python-standard-lib" data-title="Python必须了解的标准库" data-url="http://yoursite.com/2016/04/29/python-standard-lib/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"hwwbd"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -307,8 +362,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
