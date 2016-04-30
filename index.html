@@ -113,7 +113,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Algorithm/" style="font-size: 15px;">Algorithm</a> <a href="/tags/MySql/" style="font-size: 10px;">MySql</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Ubuntu/" style="font-size: 15px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a>
+						<a href="/tags/Algorithm/" style="font-size: 15px;">Algorithm</a> <a href="/tags/MySql/" style="font-size: 10px;">MySql</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Ubuntu/" style="font-size: 15px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 15px;">Vim</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a>
 					</div>
 				</section>
 				
@@ -190,6 +190,72 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-vim-tab" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/29/vim-tab/" class="article-date">
+  	<time datetime="2016-04-29T06:58:48.000Z" itemprop="datePublished">2016-04-29</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/29/vim-tab/">Vim默认打开标签页</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>默认情况下Vim会在新窗口打新文件，修改注册表可以让Vim默认在新标签页中打开新文件</p>
+<ol>
+<li><p>双击时打开新标签页<br><code>/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/edit/command</code><br><code>/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/open/command</code><br>将上述两项的值改为”d:\Program Files (x86)\Vim\vim74\gvim.exe” -p –remote-tab-silent “%1”</p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vim/">Vim</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/04/29/vim-tab/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-python-standard-lib" class="article article-type-post" itemscope itemprop="blogPost">
   
