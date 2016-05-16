@@ -4,25 +4,31 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>在Ubuntu下使用MySQL | 平凡的世界</title>
+  <title>TCP的运输连接管理 | 平凡的世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装MySQL1. 检查系统有没有安装MySQL1sudo netstat -tap | grep mysql
-如果没有提示，则表明没有安装。若有如下提示，则表明已安装。">
+  <meta name="description" content="TCP的连接建立TCP建立连接的过程：
+
+假设主机A运行的是TCP客户程序，而B运行TCP服务器程序。最初两端的TCP进程都处于CLOSED状态。
+B的TCP服务器进程先创建传输控制块TCB，准备接受客户进程的连接请求。然后服务器进程就处于LISTEN状态，等待客户的连接请求。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在Ubuntu下使用MySQL">
-<meta property="og:url" content="http://yoursite.com/2016/03/29/mysql-ubuntu/index.html">
+<meta property="og:title" content="TCP的运输连接管理">
+<meta property="og:url" content="http://yoursite.com/2016/05/12/tcp-finite-state-machine/index.html">
 <meta property="og:site_name" content="平凡的世界">
-<meta property="og:description" content="安装MySQL1. 检查系统有没有安装MySQL1sudo netstat -tap | grep mysql
-如果没有提示，则表明没有安装。若有如下提示，则表明已安装。">
-<meta property="og:image" content="http://yoursite.com/2016/03/29/mysql-ubuntu/is_installed.png">
-<meta property="og:image" content="http://yoursite.com/2016/03/29/mysql-ubuntu/mysql_installation_pwd.png">
-<meta property="og:image" content="http://yoursite.com/2016/03/29/mysql-ubuntu/mysql_character_set.png">
-<meta property="og:updated_time" content="2016-04-18T02:10:35.032Z">
+<meta property="og:description" content="TCP的连接建立TCP建立连接的过程：
+
+假设主机A运行的是TCP客户程序，而B运行TCP服务器程序。最初两端的TCP进程都处于CLOSED状态。
+B的TCP服务器进程先创建传输控制块TCB，准备接受客户进程的连接请求。然后服务器进程就处于LISTEN状态，等待客户的连接请求。">
+<meta property="og:image" content="http://yoursite.com/tcp-three-way-handshake.png">
+<meta property="og:image" content="http://yoursite.com/tcp-four-way-handshake.png">
+<meta property="og:image" content="http://yoursite.com/tcp_finite_state_machine.png">
+<meta property="og:updated_time" content="2016-05-16T03:44:51.709Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在Ubuntu下使用MySQL">
-<meta name="twitter:description" content="安装MySQL1. 检查系统有没有安装MySQL1sudo netstat -tap | grep mysql
-如果没有提示，则表明没有安装。若有如下提示，则表明已安装。">
-<meta name="twitter:image" content="http://yoursite.com/2016/03/29/mysql-ubuntu/is_installed.png">
+<meta name="twitter:title" content="TCP的运输连接管理">
+<meta name="twitter:description" content="TCP的连接建立TCP建立连接的过程：
+
+假设主机A运行的是TCP客户程序，而B运行TCP服务器程序。最初两端的TCP进程都处于CLOSED状态。
+B的TCP服务器进程先创建传输控制块TCB，准备接受客户进程的连接请求。然后服务器进程就处于LISTEN状态，等待客户的连接请求。">
+<meta name="twitter:image" content="http://yoursite.com/tcp-three-way-handshake.png">
   
     <link rel="alternative" href="/atom.xml" title="平凡的世界" type="application/atom+xml">
   
@@ -197,11 +203,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-mysql-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-tcp-finite-state-machine" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/29/mysql-ubuntu/" class="article-date">
-  	<time datetime="2016-03-29T06:48:58.000Z" itemprop="datePublished">2016-03-29</time>
+      <a href="/2016/05/12/tcp-finite-state-machine/" class="article-date">
+  	<time datetime="2016-05-12T02:21:46.000Z" itemprop="datePublished">2016-05-12</time>
 </a>
     </div>
   
@@ -214,7 +220,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      在Ubuntu下使用MySQL
+      TCP的运输连接管理
     </h1>
   
 
@@ -223,7 +229,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySql/">MySql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Computer-Network/">Computer Network</a></li></ul>
 	</div>
 
         
@@ -238,27 +244,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h2><p><strong>1. 检查系统有没有安装MySQL</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netstat -tap | grep mysql</span><br></pre></td></tr></table></figure></p>
-<p>如果没有提示，则表明没有安装。若有如下提示，则表明已安装。<br><img src="/2016/03/29/mysql-ubuntu/is_installed.png" alt="is_installed.png" title=""><br><a id="more"></a><br><strong>2. 安装MySQL</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install mysql-server mysql-client</span><br></pre></td></tr></table></figure>
-<p>安装过程中会提示设置root账户密码<br><img src="/2016/03/29/mysql-ubuntu/mysql_installation_pwd.png" alt="mysql_installation_pwd.png" title=""></p>
-<p><strong>3. 设置远程访问</strong><br>默认情况下MySQL不允许远程访问，只能在本机访问，通过以下方法可以远程登录</p>
+        <h3 id="TCP的连接建立"><a href="#TCP的连接建立" class="headerlink" title="TCP的连接建立"></a>TCP的连接建立</h3><p>TCP建立连接的过程：</p>
 <ul>
-<li><p>方法一</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql -uroot -p                                 <span class="comment"># 登录mysql</span></span><br><span class="line"></span><br><span class="line">use mysql;                                      <span class="comment"># 使用mysql这个表</span></span><br><span class="line">update user <span class="built_in">set</span> host = <span class="string">'%'</span> <span class="built_in">where</span> user = <span class="string">'root'</span>;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>方法二<br>使任何主机使用账户username和密码pwd连接到mysql</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grant all privileges on *.* to <span class="string">'username'</span>@<span class="string">'%'</span> identified by <span class="string">'pwd'</span> with grant option;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>使IP为ip的主机使用账户username和密码pwd连接到mysql<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">grant all privileges on *.* to <span class="string">'username'</span>@<span class="string">'ip'</span> identified by <span class="string">'pwd'</span> with grant option;</span><br><span class="line">flush privileges;</span><br></pre></td></tr></table></figure></p>
-<h2 id="卸载MySQL"><a href="#卸载MySQL" class="headerlink" title="卸载MySQL"></a>卸载MySQL</h2><p><strong>1. 删除MySQL</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get autoremove mysql-server</span><br><span class="line">sudo apt-get remove mysql-common</span><br></pre></td></tr></table></figure></p>
-<p><strong>2. 清理残余数据</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg <span class="_">-l</span> |grep ^rc|awk <span class="string">'&#123;print $2&#125;'</span> |sudo xargs dpkg -P</span><br></pre></td></tr></table></figure></p>
-<h2 id="Ubuntu下使用mysql"><a href="#Ubuntu下使用mysql" class="headerlink" title="Ubuntu下使用mysql"></a>Ubuntu下使用mysql</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">/etc/init.d/mysql stop      <span class="comment"># 停止MySQL服务</span></span><br><span class="line">/etc/init.d/mysql start     <span class="comment"># 启动MySQL服务</span></span><br><span class="line">/etc/init.d/mysql restrat   <span class="comment"># 重启MySQL服务</span></span><br><span class="line"></span><br><span class="line">mysql -uroot -p             <span class="comment"># 以root用户登陆MySQL</span></span><br><span class="line"></span><br><span class="line">show databases;             <span class="comment"># 列出数据库</span></span><br><span class="line">use &lt;database_name&gt;;        <span class="comment"># 切换到数据库&lt;database_name&gt;</span></span><br><span class="line">show tables;                <span class="comment"># 显示当前数据库中的所有表</span></span><br><span class="line">describe &lt;table_name&gt;;      <span class="comment"># 显示表&lt;table_name&gt;的结构</span></span><br></pre></td></tr></table></figure>
-<h2 id="中文乱码问题"><a href="#中文乱码问题" class="headerlink" title="中文乱码问题"></a>中文乱码问题</h2><p>查看MySQL的编码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show variable like <span class="string">'character%'</span>;</span><br></pre></td></tr></table></figure></p>
-<img src="/2016/03/29/mysql-ubuntu/mysql_character_set.png" alt="mysql_character_set.png" title="">
-<p>现在需要将chararcter_set_database和character_set_server的编码改为utf8。在/etc/mysql/my.cnf中的和[mysqld]加上character-set-server = utf8，然后重启MySQL。</p>
+<li>假设主机A运行的是TCP客户程序，而B运行TCP服务器程序。最初两端的TCP进程都处于CLOSED状态。</li>
+<li>B的TCP服务器进程先创建<strong>传输控制块TCB</strong>，准备接受客户进程的连接请求。然后服务器进程就处于LISTEN状态，等待客户的连接请求。<a id="more"></a></li>
+<li>A的TCP客户进程也是首先创建<strong>传输控制块TCB</strong>，然后向B发出连接请求报文段，这时首部中的同步位SYN=1，同时选择一个初始序号seq=x。这时，TCP客户进程进入SYN-SENT状态。</li>
+<li>B收到连接请求报文段后，如同意建立连接，则向A发送确认。在确认报文段中应把SYN位和ACK位都置1，确认号ack=x+1，同时也为自己选择一个初始序号seq=y。这时，服务器进程进入SYN-RCVD状态。</li>
+<li>TCP客户进程收到B的确认后，还要向B给出确认。确认报文段的ACK置1，确认号ack=y+1，而自己的序号seq=x+1。这时，TCP连接已经建立，A进入ESTABLISHED状态。</li>
+<li>当B手打A的确认后，也进入ESTABLISHED状态。<br>以上给出的连接建立过程叫做<strong>三次握手</strong>，下面画出TCP建立连接的过程。<br><div style="text-align:center"><br><img src="tcp-three-way-handshake.png" alt="用三次握手建立TCP连接"><div>
 
+</div></div></li>
+</ul>
+<h3 id="TCP的连接释放"><a href="#TCP的连接释放" class="headerlink" title="TCP的连接释放"></a>TCP的连接释放</h3><p>TCP连接释放的过程：</p>
+<ul>
+<li>A把释放报文段首部的终止控制位FIN置为1，其序号seq=u。这时，A进入FIN-WAIT-1状态，等待B的确认。</li>
+<li>B收到连接释放报文段后即发出确认，确认号ack=u+1，而这个报文段自己的序号seq=v，然后B进入CLOSE-WAIT状态。TCP服务器进程这时通知高层应用进程，因而从A到B这个方向的连接就释放了，这时TCP连接处于半关闭状态。</li>
+<li>A收到B的确认后，就进入FIN-WAIT-2状态，等待B发出的连接释放报文段。</li>
+<li>若B已经没有要想A发送的数据，其应用进程就通知TCP释放连接。B把FIN置为1，序号为seq=w，并且还要发送上次已经发送过的确认号ack=u+1。这时，B进入LAST-ACK状态。</li>
+<li>A在收到B的连接释放报文段后发出确认，把ACK置为1，确认号ack=w+1，序号是seq=u+1，然后自己进入TIME-WAIT状态。但现在TCP连接还没释放掉，要经过<strong>时间等待计时器</strong>设置的2MSL后，A才进入到CLOSED状态。</li>
+<li>B只要收到A发出的确认，就进入到CLOSED状态。<br><div style="text-align:center"><br><img src="tcp-four-way-handshake.png" alt="TCP连接的释放过程"><div>
+
+</div></div></li>
+</ul>
+<h3 id="TCP的有限状态机"><a href="#TCP的有限状态机" class="headerlink" title="TCP的有限状态机"></a>TCP的有限状态机</h3><p>为了更清晰地看出TCP连接的各种状态之前的关系，下图给出了TCP的有限状态机。图中每一个方框即TCP可能具有的状态。每一个方框中的英文字符串是TCP标准所使用的TCP连接状态名。状态之间的箭头表示可能发生的状态变迁。箭头旁边的字表明引起这种变迁的原因，或表明发生状态变迁后又出现了什么动作。图中粗实线箭头表示对客户进程的正常变迁，粗虚实线箭头表示对服务器进程的正常变迁，而细实线箭头表示异常变迁。</p>
+<p><div style="text-align:center"><br><img src="tcp_finite_state_machine.png" alt="TCP的有限状态机"></div></p>
+<div>
+</div>
       
     </div>
     
@@ -267,15 +278,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/03/31/bash-hot-key/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Ubuntu下Bash的快捷键
-        
-      </div>
-    </a>
   
+    <a href="/2016/05/06/point-to-point-protocol/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PPP协议状态图</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -308,7 +315,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="mysql-ubuntu" data-title="在Ubuntu下使用MySQL" data-url="http://yoursite.com/2016/03/29/mysql-ubuntu/"></div>
+	<div class="ds-thread" data-thread-key="tcp-finite-state-machine" data-title="TCP的运输连接管理" data-url="http://yoursite.com/2016/05/12/tcp-finite-state-machine/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

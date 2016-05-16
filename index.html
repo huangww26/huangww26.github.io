@@ -113,7 +113,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Algorithm/" style="font-size: 15px;">Algorithm</a> <a href="/tags/Computer-Network/" style="font-size: 10px;">Computer Network</a> <a href="/tags/MySql/" style="font-size: 10px;">MySql</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Ubuntu/" style="font-size: 15px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 15px;">Vim</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a>
+						<a href="/tags/Algorithm/" style="font-size: 15px;">Algorithm</a> <a href="/tags/Computer-Network/" style="font-size: 15px;">Computer Network</a> <a href="/tags/MySql/" style="font-size: 10px;">MySql</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Ubuntu/" style="font-size: 15px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 15px;">Vim</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a>
 					</div>
 				</section>
 				
@@ -190,6 +190,73 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-tcp-finite-state-machine" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/12/tcp-finite-state-machine/" class="article-date">
+  	<time datetime="2016-05-12T02:21:46.000Z" itemprop="datePublished">2016-05-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/12/tcp-finite-state-machine/">TCP的运输连接管理</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="TCP的连接建立"><a href="#TCP的连接建立" class="headerlink" title="TCP的连接建立"></a>TCP的连接建立</h3><p>TCP建立连接的过程：</p>
+<ul>
+<li>假设主机A运行的是TCP客户程序，而B运行TCP服务器程序。最初两端的TCP进程都处于CLOSED状态。</li>
+<li>B的TCP服务器进程先创建<strong>传输控制块TCB</strong>，准备接受客户进程的连接请求。然后服务器进程就处于LISTEN状态，等待客户的连接请求。
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Computer-Network/">Computer Network</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/05/12/tcp-finite-state-machine/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-point-to-point-protocol" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -782,71 +849,10 @@
 
 
   
-    <article id="post-mysql-ubuntu" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2016/03/29/mysql-ubuntu/" class="article-date">
-  	<time datetime="2016-03-29T06:48:58.000Z" itemprop="datePublished">2016-03-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/29/mysql-ubuntu/">在Ubuntu下使用MySQL</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="安装MySQL"><a href="#安装MySQL" class="headerlink" title="安装MySQL"></a>安装MySQL</h2><p><strong>1. 检查系统有没有安装MySQL</strong><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo netstat -tap | grep mysql</span><br></pre></td></tr></table></figure></p>
-<p>如果没有提示，则表明没有安装。若有如下提示，则表明已安装。<br><img src="/2016/03/29/mysql-ubuntu/is_installed.png" alt="is_installed.png" title=""><br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySql/">MySql</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Ubuntu/">Ubuntu</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/学习笔记/">学习笔记</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/03/29/mysql-ubuntu/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
