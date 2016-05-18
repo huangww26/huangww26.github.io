@@ -31,6 +31,20 @@ def preOrder(root):
         if p.right: s.append(p.right) 
         if p.left: s.append(p.left) 
 ```
+另一种写法：
+```python
+def preOrder(root):
+    s = []
+    p = root
+    while p or s:
+        while p:
+            print p.val
+            s.append(p)
+            p = p.left
+        if s:
+            p = s.pop()
+            p = p.right
+```
 
 ## 中序遍历
 ```python
@@ -40,7 +54,7 @@ def inOrder(root):
     p = root    # 用p指向下一个待访问的结点
     s = []
     while p or s:
-        if p:               # 如果p非空，把p入栈，然后p指向坐子结点
+        if p:               # 如果p非空，把p入栈，然后p指向左子结点
             s.append(p)
             p = p.left
         else:               # 如果p空，则弹出栈顶元素进行访问，然后p指向右子结点
