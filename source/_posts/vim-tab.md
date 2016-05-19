@@ -10,9 +10,9 @@ tags: Vim
 1. 双击时打开新标签页
  `/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/edit/command`
  `/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/open/command`
- 将上述两项的值改为"d:\Program Files (x86)\Vim\vim74\gvim.exe" -p --remote-tab-silent "%1"
+ 将上述两项的值改为&ldquo;d:\Program Files (x86)\Vim\vim74\gvim.exe&rdquo;-p \-\-remote-tab-silent&ldquo;%1&rdquo;
 <!--more-->
 
 2. 右键菜单打开新标签页
  新建`HKEY_CLASSES_ROOT/*/shell/Edit with Vim(&E)/command`
- 将其默认值设为"d:\Program Files (x86)\Vim\vim74\gvim.exe" -p --remote-tab-silent "%1"
+ 将其默认值设为&ldquo;d:\Program Files (x86)\Vim\vim74\gvim.exe&rdquo;-p \-\-remote-tab-silent&ldquo;%1&rdquo;
