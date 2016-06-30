@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Vim默认打开标签页 | 平凡的世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="默认情况下Vim会在新窗口打新文件，修改注册表可以让Vim默认在新标签页中打开新文件
 
-双击时打开新标签页/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/edit/command/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/open/command将上述两项的值改为”d:\Program Files (x">
+双击时打开新标签页/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/edit/command/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/open/command将上述两项的值改为&amp;ldquo;d:\Program Fi">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vim默认打开标签页">
 <meta property="og:url" content="http://yoursite.com/2016/04/29/vim-tab/index.html">
 <meta property="og:site_name" content="平凡的世界">
 <meta property="og:description" content="默认情况下Vim会在新窗口打新文件，修改注册表可以让Vim默认在新标签页中打开新文件
 
-双击时打开新标签页/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/edit/command/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/open/command将上述两项的值改为”d:\Program Files (x">
-<meta property="og:updated_time" content="2016-04-30T07:12:45.732Z">
+双击时打开新标签页/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/edit/command/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/open/command将上述两项的值改为&amp;ldquo;d:\Program Fi">
+<meta property="og:updated_time" content="2016-05-20T03:13:22.979Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vim默认打开标签页">
 <meta name="twitter:description" content="默认情况下Vim会在新窗口打新文件，修改注册表可以让Vim默认在新标签页中打开新文件
 
-双击时打开新标签页/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/edit/command/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/open/command将上述两项的值改为”d:\Program Files (x">
+双击时打开新标签页/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/edit/command/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/open/command将上述两项的值改为&amp;ldquo;d:\Program Fi">
   
     <link rel="alternative" href="/atom.xml" title="平凡的世界" type="application/atom+xml">
   
   
     <link rel="icon" href="img/penguin2.ico">
   
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/style.css"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
-  <div id="container">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
     <div class="left-col">
     <div class="overlay"></div>
 <div class="intrude-less">
@@ -120,7 +120,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Algorithm/" style="font-size: 15px;">Algorithm</a> <a href="/tags/Computer-Network/" style="font-size: 15px;">Computer Network</a> <a href="/tags/MySql/" style="font-size: 10px;">MySql</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Ubuntu/" style="font-size: 15px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 15px;">Vim</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a>
+						<a href="/tags/Algorithm/" style="font-size: 15px;">Algorithm</a> <a href="/tags/Computer-Network/" style="font-size: 15px;">Computer Network</a> <a href="/tags/Data-Mining/" style="font-size: 10px;">Data Mining</a> <a href="/tags/MySql/" style="font-size: 10px;">MySql</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Ubuntu/" style="font-size: 20px;">Ubuntu</a> <a href="/tags/Vim/" style="font-size: 15px;">Vim</a> <a href="/tags/bash/" style="font-size: 10px;">bash</a> <a href="/tags/java/" style="font-size: 10px;">java</a>
 					</div>
 				</section>
 				
@@ -239,10 +239,10 @@
       
         <p>默认情况下Vim会在新窗口打新文件，修改注册表可以让Vim默认在新标签页中打开新文件</p>
 <ol>
-<li><p>双击时打开新标签页<br><code>/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/edit/command</code><br><code>/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/open/command</code><br>将上述两项的值改为”d:\Program Files (x86)\Vim\vim74\gvim.exe” -p –remote-tab-silent “%1”</p>
+<li><p>双击时打开新标签页<br><code>/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/edit/command</code><br><code>/HKEY_CLASSES_ROOT/Applications/gvim.exe/shell/open/command</code><br>将上述两项的值改为&ldquo;d:\Program Files (x86)\Vim\vim74\gvim.exe&rdquo;-p --remote-tab-silent&ldquo;%1&rdquo;</p>
 <a id="more"></a>
 </li>
-<li><p>右键菜单打开新标签页<br>新建<code>HKEY_CLASSES_ROOT/*/shell/Edit with Vim(&amp;E)/command</code><br>将其默认值设为”d:\Program Files (x86)\Vim\vim74\gvim.exe” -p –remote-tab-silent “%1”</p>
+<li><p>右键菜单打开新标签页<br>新建<code>HKEY_CLASSES_ROOT/*/shell/Edit with Vim(&amp;E)/command</code><br>将其默认值设为&ldquo;d:\Program Files (x86)\Vim\vim74\gvim.exe&rdquo;-p --remote-tab-silent&ldquo;%1&rdquo;</p>
 </li>
 </ol>
 
@@ -387,6 +387,23 @@ MathJax.Hub.Queue(function() {
 </script>
 
 
-  </div>
+  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 </body>
 </html>
