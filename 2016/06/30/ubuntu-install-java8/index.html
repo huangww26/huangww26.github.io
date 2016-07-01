@@ -6,16 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Ubuntu下安装java8 | 平凡的世界</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1234sudo add-apt-repository ppa:webupd8team/javasudo apt-get updatesudo apt-get install oracle-java8-installersudo apt-get install oracle-java8-set-default">
+  <meta name="description" content="1. 使用ppa安装添加ppa12sudo add-apt-repository ppa:webupd8team/javasudo apt-get update">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu下安装java8">
 <meta property="og:url" content="http://yoursite.com/2016/06/30/ubuntu-install-java8/index.html">
 <meta property="og:site_name" content="平凡的世界">
-<meta property="og:description" content="1234sudo add-apt-repository ppa:webupd8team/javasudo apt-get updatesudo apt-get install oracle-java8-installersudo apt-get install oracle-java8-set-default">
-<meta property="og:updated_time" content="2016-06-30T13:21:24.026Z">
+<meta property="og:description" content="1. 使用ppa安装添加ppa12sudo add-apt-repository ppa:webupd8team/javasudo apt-get update">
+<meta property="og:updated_time" content="2016-07-01T13:11:03.926Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Ubuntu下安装java8">
-<meta name="twitter:description" content="1234sudo add-apt-repository ppa:webupd8team/javasudo apt-get updatesudo apt-get install oracle-java8-installersudo apt-get install oracle-java8-set-default">
+<meta name="twitter:description" content="1. 使用ppa安装添加ppa12sudo add-apt-repository ppa:webupd8team/javasudo apt-get update">
   
     <link rel="alternative" href="/atom.xml" title="平凡的世界" type="application/atom+xml">
   
@@ -231,7 +231,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:webupd8team/java</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install oracle-java8-installer</span><br><span class="line">sudo apt-get install oracle-java8-set-default</span><br></pre></td></tr></table></figure>
+        <h3 id="1-使用ppa安装"><a href="#1-使用ppa安装" class="headerlink" title="1. 使用ppa安装"></a>1. 使用ppa安装</h3><h4 id="添加ppa"><a href="#添加ppa" class="headerlink" title="添加ppa"></a>添加ppa</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:webupd8team/java</span><br><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h4 id="安装oracle-java8-installer"><a href="#安装oracle-java8-installer" class="headerlink" title="安装oracle-java8-installer"></a>安装oracle-java8-installer</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install oracle-java8-installer</span><br></pre></td></tr></table></figure>
+<p>安装过程会提示你容易oracle的服务条款，可以用下面命令默认同意条款<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> oracle-java8-installer shared/accepted-oracle-license-v1-1 select <span class="literal">true</span> | sudo /usr/bin/debconf-set-selections</span><br></pre></td></tr></table></figure></p>
+<h4 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install oracle-java8-set-default</span><br></pre></td></tr></table></figure>
+<h3 id="2-直接解压缩安装包"><a href="#2-直接解压缩安装包" class="headerlink" title="2. 直接解压缩安装包"></a>2. 直接解压缩安装包</h3><p>未完待续！</p>
 
       
     </div>
